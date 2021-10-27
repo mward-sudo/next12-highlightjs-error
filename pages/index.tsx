@@ -2,13 +2,11 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import hljs from 'highlight.js/lib/core'
-import javascript from 'highlight.js/lib/languages/javascript'
 import styles from '../styles/Home.module.css'
 import { useEffect } from 'react'
 
 const Home: NextPage = () => {
   useEffect(() => {
-    hljs.registerLanguage('javascript', javascript)
     hljs.highlightAll()
   }, [])
 
